@@ -6,9 +6,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <title>TeachMate</title>
 <meta name="description" content="AI-powered classroom assistant for teachers">
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="/Teach-Mate/manifest.json">
 <meta name="theme-color" content="#00c8d4">
-<link rel="apple-touch-icon" href="teachmate-icon.png">
+<link rel="apple-touch-icon" href="/Teach-Mate/teachmate-icon.png">
 <style>
 :root{--bg:hsl(230,60%,8%);--fg:hsl(210,40%,96%);--card:hsl(230,40%,14%);--primary:hsl(190,90%,50%);--primary-fg:hsl(230,60%,8%);--secondary:hsl(260,60%,55%);--accent:hsl(280,70%,60%);--muted:hsl(230,30%,20%);--muted-fg:hsl(215,20%,60%);--border:hsl(230,30%,22%);--destructive:hsl(0,84%,60%);--success:hsl(142,70%,45%);--warning:hsl(38,92%,50%);--glass-bg:hsla(230,40%,18%,0.35);--glass-border:hsla(210,40%,96%,0.1);--glass-shadow:0 8px 32px hsla(230,60%,4%,0.5),0 0 80px hsla(190,90%,50%,0.03);--glass-highlight:hsla(210,40%,96%,0.08);--radius:1.25rem}
 @media(prefers-color-scheme:light){
@@ -104,26 +104,12 @@ input::placeholder,textarea::placeholder{color:var(--muted-fg)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="/Teach-Mate/config.js">
 <script>
 // ===== CONFIG =====
 // TeachMate Configuration
 // API keys are stored here separately from main code
-// For production: use a backend proxy to hide API keys completely
-window.TM_CONFIG = {
-  geminiKey: "AIzaSyAE9GWMkfSVdKHxoauI7ydLowlK4je7QAc",
-  vapidKey: "BMT-EaZtNroZ5fF_Eitxq5Le4ZewSCxkxhNGJwwOhmo4fTrRbIv0V2rltEZvv-leeIwinM6PmiV069srU7avy8o",
-  firebaseConfig: {
-    apiKey: "AIzaSyBg4lX_8ZMKSjdbzdV5dI1_dZOipJ56MK0",
-    authDomain: "teachmate12.firebaseapp.com",
-    databaseURL: "https://teachmate12-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "teachmate12",
-    storageBucket: "teachmate12.firebasestorage.app",
-    messagingSenderId: "216135007161",
-    appId: "1:216135007161:web:d00a41bfca86b776e41468"
-  }
-};
-
-
+// For production: use a backend proxy to hide API keys completel
 // ===== INLINE SERVICE WORKER =====
 const SW_CODE = `// TeachMate Service Worker with Push Notifications
 const CACHE_NAME = 'teachmate-v2';
